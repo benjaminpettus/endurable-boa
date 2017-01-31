@@ -29,7 +29,7 @@ CodeWars (just a heads up: you're required to answer a couple of super basic JS 
 
 - Writing present tense git commit messages: 25 pts
 - All exercises in the Mostly Awesome Guide are completed and pushed to GitHub: 25 pts
-- At least 5 exercises on CodeWars are completed: 25 pts
+- At least 10 exercises on CodeWars are completed: 25 pts
 
 ## Resources
 
