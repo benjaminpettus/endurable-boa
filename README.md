@@ -1,3 +1,4 @@
+
 ## Description
 
 This goal provides an introduction to functional programming concepts using JavaScript and gives you the opportunity to practice these concepts with a series of reinforcement exercises from the [Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/content/) and a handful of automated challenges on [CodeWars](https://www.codewars.com/kata/latest/my-languages?tags=Functional+Programming).
@@ -14,8 +15,8 @@ How to Stop Micromanaging Everything](https://medium.com/javascript-scene/the-tw
 - [ ] Read the [Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/content/) through Chapter 8: Tupperware
 - [ ] Complete the exercises in the Mostly Adequate Guide (note: there aren't exercises after each chapter - just the ones on Ch 4: Currying, Ch: 5: Coding by Composing, and Ch: 8 Tupperware).
 - [ ] Practice these concepts by completing at least [5 Functional Programming exercises](https://www.codewars.com/kata/latest/my-languages?tags=Functional+Programming) on 
+-OR-
 
-### Stretch Goal
 - [ ] Refactor a previous project to use functional programming patterns (strongly recommended to review the Mostly Adequate Guide before starting) 
 
 CodeWars (just a heads up: you're required to answer a couple of super basic JS questions to sign up for CodeWars). BONUS: Do more if you get through 5 exercises by the end of the cycle.
@@ -27,9 +28,8 @@ CodeWars (just a heads up: you're required to answer a couple of super basic JS 
 
 ## Quality Rubric
 
-- Writing present tense git commit messages: 25 pts
 - All exercises in the Mostly Awesome Guide are completed and pushed to GitHub: 25 pts
-- At least 10 exercises on CodeWars are completed: 25 pts
+- At least 5 exercises on CodeWars are completed: 25 pts
 
 ## Resources
 
