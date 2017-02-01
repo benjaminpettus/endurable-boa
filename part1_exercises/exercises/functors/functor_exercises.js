@@ -6,9 +6,8 @@ var _ = require('ramda');
 // ==========
 // Use _.add(x,y) and _.map(f,x) to make a function that increments a value inside a functor
 
-var ex1 = undefined;
 
-
+var ex1 = _.map(_.add(1))
 
 // Exercise 2
 // ==========
@@ -50,7 +49,7 @@ var ex4 = undefined;
 var getPost = function (i) {
   return new Task(function(rej, res) {
     setTimeout(function(){
-      res({id: i, title: 'Love them futures'})  
+      res({id: i, title: 'Love them futures'})
     }, 300)
   });
 };
