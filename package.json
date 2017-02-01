@@ -1,0 +1,22 @@
+{
+  "name": "endurable-boa",
+  "version": "1.0.0",
+  "description": "This goal provides an introduction to functional programming concepts using JavaScript and gives you the opportunity to practice these concepts with a series of reinforcement exercises from the [Mostly Adequate Guide to Functional Programming](https://drboolean.gitbooks.io/mostly-adequate-guide/content/) and a handful of automated challenges on [CodeWars](https://www.codewars.com/kata/latest/my-languages?tags=Functional+Programming).",
+  "main": "",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "cd part1_exercises && npm test && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminpettus/endurable-boa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benjaminpettus/endurable-boa/issues"
+  },
+  "homepage": "https://github.com/benjaminpettus/endurable-boa#readme"
+}
