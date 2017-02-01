@@ -6,6 +6,7 @@
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
+    "i": "cd part1_exercises && npm i && cd ..",
     "test": "cd part1_exercises && npm test && cd .."
   },
   "repository": {
