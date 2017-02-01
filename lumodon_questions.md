@@ -60,6 +60,24 @@ instead of:
 ```
 // 'H. S. T'
 ```
+### Answer:
+from doing compose exercises:
+```
+// Exercise 2:
+// ============
+// use _.compose(), _.prop() and _.head() to retrieve the name of the first car
+var nameOfFirstCar = _.compose( _.prop('name'), _.head);
+```
+- It would seem that order DOES matter, and the *compose* function takes things in backwards order.
+- When trying to do the above exercise like this:
+```
+// Exercise 2:
+// ============
+// use _.compose(), _.prop() and _.head() to retrieve the name of the first car
+var nameOfFirstCar = _.compose( _.head, _.prop('name') );
+```
+It doesn't pass.
 
-
-
+## Important Rule:
+// map's composition law
+var law = compose(map(f), map(g)) === map(compose(f, g));
