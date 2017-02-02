@@ -89,3 +89,66 @@ Note: This line from chapter 8 functors exercise makes so much sense! You're pip
 var ex4 = _.compose( Maybe.of, parseInt );
 ```
 
+==================== Code Wars =====================
+# Code Wars Exercises
+## Exercise 1: Calculate average
+
+My Solution:
+```
+function find_average(array) {
+  let r = array.reduce( (a,b) => {
+    return a + b
+  })
+  
+  return r / array.length
+}
+```
+
+Better Solution:
+```
+function find_average(array) {
+  return array.reduce((result, current) => result + current, 0) / array.length;
+}
+```
+
+## Exercise 2: Multiply All
+
+My Solution:
+```
+const multiplyAll = array => {
+  return multiplicand => {
+    const resultArray = []
+    array.forEach( element => {
+      resultArray.push( element * multiplicand )
+    })
+    return resultArray
+  }
+}
+```
+
+Better Solution:
+```
+multiplyAll = a => x => a.map(e => e * x);
+```
+
+## Exercise 3: Higher-Order Functions Series - Find the first Python developer
+
+My Solution:
+```
+const getFirstPython = list => {
+  for(let developer of list) {
+    if(developer.language === 'Python') {
+      return developer.firstName + ', ' + developer.country
+    }
+  }
+  return 'There will be no Python developers'
+}
+```
+
+Better Solution:
+```
+function getFirstPython(list) {
+  const dev = list.find(x => x.language === "Python")
+  return dev ? `${dev.firstName}, ${dev.country}` : "There will be no Python developers"
+}
+```
