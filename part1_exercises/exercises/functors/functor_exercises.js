@@ -14,7 +14,7 @@ var ex1 = _.map(_.add(1))
 // Use _.head to get the first element of the list
 var xs = Identity.of(['do', 'ray', 'me', 'fa', 'so', 'la', 'ti', 'do']);
 
-var ex2 = undefined;
+var ex2 = _.map(_.head())
 
 
 
@@ -25,7 +25,7 @@ var safeProp = _.curry(function (x, o) { return Maybe.of(o[x]); });
 
 var user = { id: 2, name: "Albert" };
 
-var ex3 = undefined;
+var ex3 =  _.compose(map(_.head), safeProp('name'))
 
 
 
@@ -37,7 +37,7 @@ var ex4 = function (n) {
   if (n) { return parseInt(n); }
 };
 
-var ex4 = undefined;
+var ex4 = _.compose(Maybe.of, parseInt)
 
 
 
@@ -47,16 +47,14 @@ var ex4 = undefined;
 
 // getPost :: Int -> Future({id: Int, title: String})
 var getPost = function (i) {
-  return new Task(function(rej, res) {
+  return new Task(function(req, res) {
     setTimeout(function(){
       res({id: i, title: 'Love them futures'})
     }, 300)
   });
 };
 
-var ex5 = undefined;
-
-
+var ex5 = _.compose(map(_.toUpper), map( _.prop('title')), getPost )
 
 // Exercise 6
 // ==========
