@@ -23,7 +23,8 @@ var ex2 = _.map(_.head);
 var safeProp = _.curry(function (x, o) { return Maybe.of(o[x]); });
 
 var user = { id: 2, name: "Albert" };
-var ex3 = _.compose( map(_.head), safeProp('name') );
+
+var ex3 =  _.compose(map(_.head), safeProp('name'))
 
 
 
@@ -45,16 +46,14 @@ var ex4 = _.compose( Maybe.of, parseInt );
 
 // getPost :: Int -> Future({id: Int, title: String})
 var getPost = function (i) {
-  return new Task(function(rej, res) {
+  return new Task(function(req, res) {
     setTimeout(function(){
       res({id: i, title: 'Love them futures'})
     }, 300)
   });
 };
 
-var ex5 = undefined;
-
-
+var ex5 = _.compose( map( _.toUpper ), map( _.prop('title') ), getPost )
 
 // Exercise 6
 // ==========
@@ -66,7 +65,7 @@ var checkActive = function(user) {
  return user.active ? Right.of(user) : Left.of('Your account is not active')
 };
 
-var ex6 = undefined;
+var ex6 = _.compose( map( showWelcome ), checkActive );
 
 
 
