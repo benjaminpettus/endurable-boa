@@ -54,7 +54,7 @@ var getPost = function (i) {
   });
 };
 
-var ex5 = _.compose(map(_.toUpper), map( _.prop('title')), getPost )
+var ex5 = _.compose( map( _.toUpper ), map( _.prop('title') ), getPost )
 
 // Exercise 6
 // ==========
@@ -66,7 +66,7 @@ var checkActive = function(user) {
  return user.active ? Right.of(user) : Left.of('Your account is not active')
 };
 
-var ex6 = undefined;
+var ex6 = _.compose( map( showWelcome ), checkActive );
 
 
 
