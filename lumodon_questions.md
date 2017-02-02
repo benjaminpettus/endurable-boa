@@ -78,6 +78,14 @@ var nameOfFirstCar = _.compose( _.head, _.prop('name') );
 ```
 It doesn't pass.
 
+====================== Notes ======================
 ## Important Rule:
 // map's composition law
 var law = compose(map(f), map(g)) === map(compose(f, g));
+
+## Exercise 4 from functors
+Note: This line from chapter 8 functors exercise makes so much sense! You're piping information from one function to another. Not sure why this only just now makes sense.
+```
+var ex4 = _.compose( Maybe.of, parseInt );
+```
+
