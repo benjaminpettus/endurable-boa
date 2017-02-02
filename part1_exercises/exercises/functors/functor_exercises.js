@@ -74,14 +74,16 @@ var ex6 = _.compose( map( showWelcome ), checkActive );
 // Write a validation function that checks for a length > 3. It should return Right(x) if it is greater than 3 and Left("You need > 3") otherwise
 
 var ex7 = function(x) {
-  return undefined; // <--- write me. (don't be pointfree)
+  return x.length > 3 ? new Right(x) : new Left('You need > 3');
 };
 
 
 
 // Exercise 8
 // ==========
-// Use ex7 above and either as a functor to save the user if they are valid or return the error message string. Remember either's two arguments must return the same type.
+// Use ex7 above and either as a functor to save the user if they are valid 
+// or return the error message string. Remember either's two arguments must 
+// return the same type.
 
 var save = function(x) {
   return new IO(function() {
@@ -90,6 +92,25 @@ var save = function(x) {
   });
 };
 
-var ex8 = undefined;
+var dontSave = function(x) {
+  return new IO(function() {
+    return x
+  })
+}
+
+// var ex8 = function() {
+//   var args = Array.prototype.slice.call(arguments, 0);
+//   let result = either.apply( null, args );
+//   console.log(result.toString(), '\n', 'args:', args);
+//   return result
+// }
+// function toString(x){
+//   console.log("TO STRING:", x)
+//   return x.toString()
+// }
+// let newEither = either(save, save, ex7("phi"))
+// console.log(newEither)
+
+var ex8 = _.compose( either(dontSave, save ), ex7)
 
 module.exports = {ex1: ex1, ex2: ex2, ex3: ex3, ex4: ex4, ex5: ex5, ex6: ex6, ex7: ex7, ex8: ex8};
